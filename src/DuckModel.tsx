@@ -18,8 +18,8 @@ const DuckModel: React.FC<DuckModelProps> = ({
 }) => {
   const meshRef = useRef<Mesh>(null);
   
-  // Load the duck model
-  const gltf = useLoader(GLTFLoader, '/Duck.glb');
+  // Load the duck model from the provided URL
+  const gltf = useLoader(GLTFLoader, 'https://content.mext.app/uploads/6796cce2-91be-44db-a8b9-0df8d97e4e1f.glb');
   
   // Auto-rotation animation
   useFrame((state) => {
